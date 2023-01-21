@@ -110,3 +110,6 @@ h1 {
 .play-again-hide {
   display: none
 }
+.play-again {
+  cursor: pointer
+}

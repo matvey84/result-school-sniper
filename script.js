@@ -41,6 +41,7 @@ function startTimer() {
 function setTime(value) {
   timer.innerHTML = `00:${value}`;
 }
+
 let score = 0;
 let loose = 0;
 let move = 0;
@@ -59,12 +60,11 @@ board.addEventListener('click', (e) => {
 
 
 function finishGame() {
-  timer.parentNode.remove();
   clearInterval();
   board.innerHTML = `
-  <h1>Ходов: <span class="move">${move}</h1>
-  <h1>Попал: <span class="primary">${score}</span></h1>
-  <h1>Промах: <span class="loose"> ${loose}</span></h1>
+  <h1>Ходов: <span class="info move">${move}</h1>
+  <h1>Попал: <span class="info primary">${score}</span></h1>
+  <h1>Промах: <span class="info loose"> ${loose}</span></h1>
   `;
 
   document.querySelector('#play-again').classList.toggle('play-again-hide');
@@ -73,6 +73,10 @@ function finishGame() {
     e.preventDefault();
     screen[1].classList.remove("up");
     e.target.classList.toggle('play-again-hide');
+    document.querySelectorAll('.info').forEach((info) => info.parentNode.remove())
+    loose = 0;
+    move = 0;
+    score = 0;
   }
   );
 }
