@@ -9,24 +9,24 @@
   <body>
     <div class="screen">
       <h1>Aim Training</h1>
-      <a href="#" class="start">Начать игру</a>
+      <a href="#" class="start" id="start">Начать игру</a>
     </div>
 
     <div class="screen">
       <h1>Выберите время</h1>
       <ul class="time-list">
         <li>
-          <button class="time-btn">
+          <button class="time-btn" data-time="1">
             10 сек
           </button>
         </li>
         <li>
-          <button class="time-btn">
+          <button class="time-btn" data-time="2">
             20 сек
           </button>
         </li>
         <li>
-          <button class="time-btn">
+          <button class="time-btn" data-time="3">
             30 сек
           </button>
         </li>
@@ -34,8 +34,10 @@
     </div>
 
     <div class="screen">
+      <h2 class="play-again-hide" id="play-again">Сыграть еще</h2>
       <h3>Осталось <span id="time">00:00</span></h3>
       <div class="board" id="board"></div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

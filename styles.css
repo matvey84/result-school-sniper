@@ -80,11 +80,18 @@ h1 {
 .primary {
   color: #16d9e3;
 }
+.move {
+  color: rgb(22, 227, 39);
+}
+.loose {
+  color: rgb(231, 56, 12);
+}
 
 .board {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   position: relative;
   width: 500px;
   height: 500px;
@@ -99,4 +106,7 @@ h1 {
   position: absolute;
   border-radius: 50%;
   cursor: pointer;
+}
+.play-again-hide {
+  display: none
 }
